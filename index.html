@@ -44,7 +44,7 @@
 }
 
 .skill-badge {
-  background-color: #515152;
+  background-color: #2c2c2e;
   color: #ffffff;
   width: 100px;
   height: 100px;
@@ -56,9 +56,10 @@
 }
 
 .skill-badge:hover {
-  background-color: #6e2b81b7;
+  background-color: #3a3a3c;
   color: #ffffff;
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 .tech-badge {
@@ -88,8 +89,100 @@
 }
 
 .textedu{
-    text-align: center;
+   text-align: center;
+   margin-right: 20px;
 }
+
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #6e2b81;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2c2c2e;
+  color: white;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  background: #6e2b81;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -8px;
+}
+
+.timeline-item.right::after {
+  left: -8px;
+}
+
+.card {
+  background-color: #2c2c2e;
+  color: #ffffff;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background-color: #3a3a3c;
+  cursor: pointer;
+}
+
+.card .btn {
+  background-color: #515152;
+  color: #ffffff;
+}
+
+.card .btn:hover {
+  background-color: #6e2b81b7;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .timeline-item h5 {
+    font-size: 1rem;
+  }
+
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
@@ -108,7 +201,7 @@
   <section id="about" class="py-5 about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="text-light">
+      <p class="text-light text-center">
         I'm a motivated front-end developer with a Bachelor's degree in Computer Science from Prince Sattam bin Abdulaziz University (GPA: 4.86/5). 
         I have hands-on experience through training at KACST, SDAIA ,and Tuwaiq Academy.  <strong> My goal is to build interactive and modern websites that enhance user experience.</strong> 
       </p>
@@ -134,14 +227,14 @@
       <span class="skill-badge">Node.js</span>
       <!-- <span class="skill-badge">Express</span> -->
       <span class="skill-badge">MongoDB</span>
-      <span class="skill-badge">MySQL</span>
+      <!-- <span class="skill-badge">MySQL</span> -->
       <span class="skill-badge">Git/GitHub</span>
     </div>
   </div>
 </section>
 
 <!-- Projects -->
-<section id="projects" class="py-5">
+<section id="projects" class="py-5 px-3">
   <div class="container">
     <h2 class="section-title">Projects</h2>
     <div class="row g-4">
@@ -167,7 +260,7 @@
           <img src="Screenshot 2025-06-09 012735.png" class="card-img-top" alt="To-Do List">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">To-Do List</h5>
-            <p class="card-text">A web app for task management: add, edit, and delete tasks with a dynamic interface using HTML,CSS,JS.</p>
+            <p class="card-text">A web app for task management: add, edit, and delete tasks with a dynamic interface using HTML,CSS,and JS.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/ToDoList" class="btn btn-sm">View Code</a>
               <a href="https://67a4b0e29574e42224bc38f0--incandescent-starlight-843e0a.netlify.app/" class="btn btn-sm">View Project</a>
@@ -184,7 +277,7 @@
           <img src="Screenshot 2025-06-08 214852.png" class="card-img-top" alt="To-Do List">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Geeks</h5>
-            <p class="card-text">A Geeks learning platform, It includes Introduction of platform, course layouts,Instructor, and responsive navigation using HTML,Bootstrap.</p>
+            <p class="card-text">A Geeks learning platform, It includes Introduction of platform, course layouts,Instructor, and responsive navigation using HTML,and Bootstrap.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/Geeks-project" class="btn btn-sm">View Code</a>
               <a href="https://ranaaldosari.github.io/Geeks-project/" class="btn btn-sm">View Project</a>
@@ -201,7 +294,7 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Food Lover</h5>
             <p class="card-text">
-A Food Lover site it's a simple and responsive restaurant website that show the menu and allows users to Book a table, using HTML, CSS.</p>
+A Food Lover site it's a simple and responsive restaurant website that show the menu and allows users to Book a table, using HTML,and CSS.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/Food-Lover" class="btn btn-sm">View Code</a>
               <a href="https://transcendent-hamster-54640a.netlify.app/" class="btn btn-sm">View Project</a>
@@ -216,7 +309,7 @@ A Food Lover site it's a simple and responsive restaurant website that show the 
           <img src="Screenshot 2025-06-08 212727.png" class="card-img-top" alt="Fusion OCR">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Activision</h5>
-            <p class="card-text">An Activision clone ,includes gaming brand’s home page, show products, games, and About page ,service page,contact page in a dynamic layout using React,Tailwind css.</p>
+            <p class="card-text">An Activision clone ,includes gaming brand’s Home page, show products, games, and About page ,Carrers page,Support page in a dynamic layout using React,Tailwind css.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/Activition-Project" class="btn btn-sm">View Code</a>
               <a href="https://activition.netlify.app/" class="btn btn-sm">View Project</a>
@@ -247,8 +340,8 @@ A TalkLine it's a real-time chat website,and modern messaging platform with chat
         <div class="card h-100 shadow-sm">
           <img src="Screenshot 2025-06-08 213833.png" class="card-img-top" alt="Fusion OCR">
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">United Ariline</h5>
-            <p class="card-text">A United Airline's clone ,including navigation, flight booking layout, and UI responsiveness using React.</p>
+            <h5 class="card-title">United Airline</h5>
+            <p class="card-text">A United Airline's clone ,including navigation, flight booking layout, and UI responsiveness using React,and Tailwind css.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/UnitedAirline-project" class="btn btn-sm">View Code</a>
               <a href="https://unitedairline-1.netlify.app/" class="btn btn-sm">View Project</a>
@@ -263,10 +356,10 @@ A TalkLine it's a real-time chat website,and modern messaging platform with chat
           <img src="Screenshot 2025-06-08 214425.png" class="card-img-top" alt="Fusion OCR">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">YouTube </h5>
-            <p class="card-text">A YouTube clone, It includes a video cards , sidebar navigation,Search bar ,useing React,YouTube Api</p>
+            <p class="card-text">A YouTube clone, It includes a video cards , sidebar navigation,Search bar ,useing React,YouTube Api,and Tailwind css.</p>
             <div class="mt-auto">
               <a href="https://github.com/RanaAldosari/youtub-clone" class="btn btn-sm">View Code</a>
-              <a href="https://talkline-project.netlify.app/" class="btn btn-sm">View Project</a>
+              <a href="https://cheerful-duckanoo-47c146.netlify.app/" class="btn btn-sm">View Project</a>
             </div>
           </div>
         </div>
@@ -283,25 +376,56 @@ A TalkLine it's a real-time chat website,and modern messaging platform with chat
   <div class="container">
     <h2 class="section-title">Education</h2>
     <ul>
-      <h6 class="textedu text-light"><strong>Bachelor's in Computer Science – Prince Sattam bin Abdulaziz University</strong> (2020–2024), GPA: 4.86/5</h6>
+      <h6 class="textedu text-light "><strong>Bachelor's in Computer Science – Prince Sattam bin Abdulaziz University</strong> (2020–2024), GPA: 4.86/5</h6>
     </ul>
   </div>
 </section>
 
-<!-- Experience -->
 <section id="experience" class="py-5">
   <div class="container">
     <h2 class="section-title">Experience</h2>
-    <ul class="text-light">
-      <li><strong>COOP Training – KACST</strong> (June–August 2023): UI/UX, Cybersecurity, Web Development.</li>
-      <li><strong>Web Development Camp – Hash Plus</strong> (July–August 2024): Responsive website design using Tailwind CSS.</li>
-      <li><strong>Build AI Application – SDAIA</strong> (Oct–Nov 2024): Python, TensorFlow, Pandas, NumPy, Machine Learning, Dataset handling.</li>
-<li><strong>Front-End Bootcamp – Tuwaiq Academy</strong> (Apr 2025 – present): Full-Stack JavaScript, React, Node.js, MongoDB.</li>
-<li><strong>Volunteer Experience – Get Along With Me</strong> (Jun 2025 – present): Contributed to a community support web platform using React , JavaScript , and TypeScript.</li>
+    <div class="timeline">
 
-    </ul>
+
+
+   
+
+      <div class="timeline-item right">
+        <h5><strong>Front-End Bootcamp – Tuwaiq Academy</strong></h5>
+        <p>(Apr 2025 – present)</p>
+        <p>Full-Stack JavaScript, React, Node.js, MongoDB.</p>
+      </div>
+
+      <div class="timeline-item left">
+        <h5><strong>Volunteer – Get Along With Me</strong></h5>
+        <p>(Dec 2024 – present)</p>
+        <p>React , JavaScript , and TypeScript.</p>
+      </div>
+
+   <div class="timeline-item right">
+        <h5><strong>Build AI Application – SDAIA</strong></h5>
+        <p>(Oct–Nov 2024)</p>
+        <p>Python, TensorFlow, Pandas, Machine Learning.</p>
+      </div>
+
+      <div class="timeline-item left">
+        <h5><strong>Web Development Camp – Hash Plus</strong></h5>
+        <p>(July–August 2024)</p>
+        <p>Responsive website design using Tailwind CSS.</p>
+      </div>
+
+
+   <div class="timeline-item right">
+        <h5><strong>COOP Training – KACST</strong></h5>
+        <p>(June–August 2023)</p>
+        <p>UI/UX, Cybersecurity, Web Development.</p>
+      </div>
+
+
+    </div>
   </div>
 </section>
+
 
 
   <!-- Certifications -->
@@ -332,7 +456,7 @@ A TalkLine it's a real-time chat website,and modern messaging platform with chat
         <i class="bi bi-linkedin fs-4"></i>
       </a>
     </div>
-    <p style="color: #515152;">&copy; 2025 Rana Aldosari. All rights reserved. <br>ranaaldosari10@gmail.com</p>
+    <p style="color: #515152;">&copy; 2025 Rana Aldosari. All rights reserved.</p>
   </div>
 </footer>
 
